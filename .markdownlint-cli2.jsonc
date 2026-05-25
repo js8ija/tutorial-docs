@@ -1,0 +1,26 @@
+{
+  "config": {
+    "default": true,
+    "MD013": false,
+    "MD024": {
+      "siblings_only": true
+    },
+    "MD033": false,
+    "MD034": false,
+    "MD041": false,
+    "MD025": false,
+    "MD028": false,
+    "MD029": false,
+    "MD051": false,
+    "MD060": false
+  },
+  "globs": [
+    "docs/**/*.md"
+  ],
+  "ignores": [
+    "node_modules/**",
+    "docs/.vuepress/.cache/**",
+    "docs/.vuepress/.temp/**",
+    "docs/.vuepress/dist/**"
+  ]
+}

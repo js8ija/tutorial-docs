@@ -1,0 +1,23 @@
+{
+  "name": "simprint-tutorial-docs",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "docs:generate": "node scripts/generate-docs.mjs",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "check:structure": "node scripts/verify-docsite.mjs",
+    "check:markdown": "markdownlint-cli2 \"docs/**/*.md\"",
+    "check": "npm run docs:generate && npm run check:structure && npm run check:markdown && npm run docs:build"
+  },
+  "devDependencies": {
+    "@vuepress/bundler-vite": "2.0.0-rc.30",
+    "@vuepress/theme-default": "2.0.0-rc.130",
+    "markdownlint-cli2": "latest",
+    "sass": "latest",
+    "sass-embedded": "latest",
+    "sass-loader": "latest",
+    "vuepress": "2.0.0-rc.30"
+  }
+}

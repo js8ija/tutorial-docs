@@ -1,0 +1,26 @@
+:root {
+  --content-width: 920px;
+}
+
+.vp-page-title h1 {
+  line-height: 1.18;
+}
+
+.theme-default-content {
+  font-size: 16px;
+  line-height: 1.78;
+}
+
+.theme-default-content table {
+  display: table;
+  width: 100%;
+}
+
+.theme-default-content td,
+.theme-default-content th {
+  vertical-align: top;
+}
+
+.theme-default-content code {
+  word-break: break-word;
+}
