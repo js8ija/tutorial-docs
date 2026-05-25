@@ -24,6 +24,16 @@ for (const relativePath of requiredFiles) {
   }
 }
 
+const tutorialIndexPath = path.join(rootDir, 'docs', 'tutorials', 'README.md')
+if (fs.existsSync(tutorialIndexPath)) {
+  const tutorialIndex = fs.readFileSync(tutorialIndexPath, 'utf8')
+  const rootTutorialLinks = tutorialIndex.match(/\]\(\/tutorials\/[^)]+\)/g) ?? []
+
+  for (const link of rootTutorialLinks) {
+    failures.push(`Root-relative tutorial link should be relative in docs/tutorials/README.md: ${link}`)
+  }
+}
+
 for (const collection of tutorialCollections) {
   const outputDir = path.join(rootDir, 'docs', 'tutorials', collection.id)
   const indexPath = path.join(outputDir, 'README.md')

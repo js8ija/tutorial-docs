@@ -185,7 +185,7 @@ function writeTutorialIndex(collections) {
       '',
       collection.description,
       '',
-      `- [进入教程](/tutorials/${collection.id}/)`,
+      `- [进入教程](./${collection.id}/)`,
       '',
     ]),
   ].join('\n')
