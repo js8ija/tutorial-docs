@@ -3,10 +3,16 @@ import { defaultTheme } from '@vuepress/theme-default'
 import { defineUserConfig } from 'vuepress'
 import { createNavbar, createSidebar } from '../../tutorials.config.mjs'
 
+const base = process.env.VUEPRESS_BASE ?? '/tutorial-docs/'
+
 export default defineUserConfig({
+  base,
   lang: 'zh-CN',
   title: '本地教程文档',
   description: 'AI 编码工作流、工具链与实践指南',
+  head: [
+    ['link', { rel: 'icon', href: `${base}favicon.svg`, type: 'image/svg+xml' }],
+  ],
   bundler: viteBundler(),
   theme: defaultTheme({
     logo: null,
